@@ -41,7 +41,7 @@ html {
 }
 
 .input-text {
-    min-width: 240px;
+    min-width: 200px;
     height: 100%;
     outline: none;
     border: none;
