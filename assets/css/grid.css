@@ -9,6 +9,17 @@
     margin: 0 auto;
 }
 
+.grid.wide-1520 {
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.grid.wide-1298 {
+    max-width: 1298px;
+    margin: 0 auto;
+}
+
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -436,7 +447,7 @@
 
 /* > PC low resolution */
 @media (min-width: 1025px) and (max-width: 1239px) {
-    /* .wide {
+    /* .wide-984 {
         width: 984px;
     } */
 

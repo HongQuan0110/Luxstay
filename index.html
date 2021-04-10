@@ -123,6 +123,22 @@
             </div>
         </div>
 
+        <div class="content">
+            <div class="grid wide-1298">
+                <div class="slide-show">
+                    <img class="slide-show__img" src="./assets/images/slide-1.png" alt="">
+                    <img class="slide-show__img" src="./assets/images/slide-2.png" alt="">
+                    <img class="slide-show__img" src="./assets/images/slide-3.png" alt="">
+                    <img class="slide-show__img" src="./assets/images/slide-4.png" alt="">
+                    <div class="slide-show-dot">
+                        <span class="dot" onclick="changeSlide(0)"></span>
+                        <span class="dot" onclick="changeSlide(1)"></span>
+                        <span class="dot" onclick="changeSlide(2)"></span>
+                        <span class="dot" onclick="changeSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -159,6 +175,28 @@
                 document.getElementById("transfer").setAttribute("class", "transfer nav-mobile__transfer")
             }
         })
+
+
+        function changeSlide(n = 0) {
+            var slide = document.getElementsByClassName("slide-show__img");
+            var dot = document.getElementsByClassName("dot");
+            for(var i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+                dot[i].className = "dot";
+            }
+            slide[n].style.display = "block";
+            dot[n].className += " active";
+        }
+
+        var n = 0
+        setInterval(() => {
+            n++
+            if(n > 3) {
+                n = 0
+            }
+            changeSlide(n);
+        }, 3000);
+        changeSlide();
     </script>
 </body>
 </html>
