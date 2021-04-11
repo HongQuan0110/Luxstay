@@ -40,6 +40,10 @@ html {
     display: none !important;
 }
 
+.text-color-sub {
+    color: #555;
+}
+
 .input-text {
     min-width: 200px;
     height: 100%;
@@ -69,4 +73,9 @@ html {
 
 .btn--search {
     background-color: var(--theme_palette-hof);
+}
+
+
+.font-size-28 {
+    font-size: 2.8rem !important;
 }

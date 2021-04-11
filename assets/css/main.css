@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     background-color: var(--theme_palette-white);
+    z-index: 1;
 }
 
 .header__left {
@@ -365,3 +366,231 @@
 .active {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.content__header {
+    margin-top: 52px;
+}
+
+.contet__title {
+    font-size: 2.4rem;
+    color: var(--text-color-hof);
+    margin: 12px 0;
+}
+
+.contet__sub {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.contet__sub a {
+    color: var(--text-color-hof);
+}
+
+.contet__sub a:hover {
+    color: var(--text-color-hover);
+}
+
+.content__webcome-box {
+    margin-top: 70px;
+}
+
+.content__webcome-card {
+    background-color: var(--theme_palette-white);
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+}
+
+.content__webcome-card:hover .content__webcome-name {
+    color: var(--text-color-hover);
+}
+
+.content__webcome-img {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 56%;
+}
+
+.img-homestay {
+    background-image: url('../images/homestay.png');
+}
+
+.img-house {
+    background-image: url('../images/entire-houses.jpg');
+}
+
+.content__welcome-desc {
+    padding: 10px 8px;
+}
+
+.content__webcome-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color-hof);
+    padding: 4px 16px;
+    transition: color linear 0.2s;
+}
+
+.content__webcome-sub {
+    font-size: 1.4rem;
+    color: #999;;
+    font-weight: 400;
+    padding: 4px 16px;
+}
+
+.citySlide {
+    position: relative;
+    margin-top: 20px;
+}
+
+.citySlide__show {
+    overflow-x: auto;
+    position: relative;
+}
+
+#citySlide__transform {
+    transition: transform linear 0.5s;
+}
+
+.citySlide__show::-webkit-scrollbar {
+    display: none;
+}
+
+.citySlide__img {
+    position: relative;
+    height: 308px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    border-radius: var(--border-rad);
+}
+
+.img-hn {
+    background-image: url('../images/HN.png');
+}
+
+.img-hcm {
+    background-image: url('../images/HCM.png');
+}
+
+.img-vt {
+    background-image: url('../images/VT.png');
+}
+
+.img-dl {
+    background-image: url('../images/DL.png');
+}
+
+.img-dn {
+    background-image: url('../images/DN.png');
+}
+
+.img-nt {
+    background-image: url('../images/NT.png');
+}
+
+.img-qn {
+    background-image: url('../images/QN.png');
+}
+
+.img-ha {
+    background-image: url('../images/HA.png');
+}
+
+.citySlide__img-info {
+    position: absolute;
+    left: 12%;
+    bottom: 8%;
+}
+
+.citySlide__img-name {
+    font-size: 2.6rem;
+    color: var(--text-color-white);
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.citySlide__img-number {
+    font-size: 1.6rem;
+    color: var(--text-color-white);
+}
+
+.citySlide__img-number span {
+    font-weight: 600;
+}
+
+.citySlide__btn-left,
+.citySlide__btn-right {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--theme_palette-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    top: 50%;
+    transition: box-shadow linear 0.2s;
+}
+
+.citySlide__btn-left::after,
+.citySlide__btn-right::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: #000;
+    top: 50%;
+    left: calc(50% + 5px);
+    transform: rotate(-45deg) translate(-50%, -50%);
+    transform-origin: left;
+    transition: border-color linear 0.2s;
+}
+
+.citySlide__btn-right::after {
+    left: calc(50% - 5px);
+    border-width: 1px 1px 0 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.citySlide__btn-left:hover,
+.citySlide__btn-right:hover {
+    box-shadow: 0 0 5px var(--text-color-hover);
+    cursor: pointer;
+}
+
+.citySlide__btn-left:hover::after,
+.citySlide__btn-right:hover::after {
+    border-color: var(--text-color-hover);
+}
+
+.citySlide__btn-left {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.citySlide__btn-right {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+/* Disable button */
+.disable.citySlide__btn-left:hover,
+.disable.citySlide__btn-right:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.disable.citySlide__btn-left:hover::after,
+.disable.citySlide__btn-right:hover::after {
+    border-color: #000;
+}
+
+.disable {
+    opacity: 0.5;
+}
+
+/*  */

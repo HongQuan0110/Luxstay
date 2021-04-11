@@ -137,6 +137,110 @@
                         <span class="dot" onclick="changeSlide(3)"></span>
                     </div>
                 </div>
+
+                <div class="content__header">
+                    <h2 class="contet__title font-size-28">Chào mừng đến với Luxstay!</h2>
+                    <p class="contet__sub">Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên Luxstay</p>
+                    <p class="contet__sub"><a href="">Đăng nhập</a> hoặc <a href="">Đăng ký</a> để trải nghiệm !</p>
+                    <div class="row content__webcome-box">
+                        <div class="col l-2-4 m-6 c-12">
+                            <a href="#" class="content__webcome-card">
+                                <div class="content__webcome-img img-homestay">
+                                </div>
+                                <div class="content__welcome-desc">
+                                    <p class="content__webcome-name">Homestay</p>
+                                    <span class="content__webcome-sub">Căn hộ dịch vụ & Biệt thự</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col l-2-4 m-6 c-12">
+                            <a href="#" class="content__webcome-card">
+                                <div class="content__webcome-img img-house"></div>
+                                <div class="content__welcome-desc">
+                                    <p class="content__webcome-name">Vé tham quan</p>
+                                    <span class="content__webcome-sub">Mua vé thật dễ dàng</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content__header">
+                    <h2 class="contet__title">Địa điểm nổi bật</h2>
+                    <p class="contet__sub text-color-sub">Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn</p>
+                    <div class="citySlide">
+                        <div class="citySlide__show">
+                            <div id="citySlide__transform" class="row sm-gutter no-wrapt">
+                                <div class="col-m l-2-4 m-2-4 ">
+                                    <div class="citySlide__img img-hn">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Hà Nội</p>
+                                            <p class="citySlide__img-number"><span>3100</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-hcm">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">TP. Hồ Chí Minh</p>
+                                            <p class="citySlide__img-number"><span>2714</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-vt">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Vũng Tàu</p>
+                                            <p class="citySlide__img-number"><span>535</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-dl">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Đà Lạt</p>
+                                            <p class="citySlide__img-number"><span>1667</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-dn">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Đà Nẵng</p>
+                                            <p class="citySlide__img-number"><span>920</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-nt">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Nha Trang</p>
+                                            <p class="citySlide__img-number"><span>635</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-qn">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Quảng Ninh</p>
+                                            <p class="citySlide__img-number"><span>273</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-m l-2-4 m-2-4">
+                                    <div class="citySlide__img img-hn">
+                                        <div class="citySlide__img-info">
+                                            <p class="citySlide__img-name">Hội An</p>
+                                            <p class="citySlide__img-number"><span>317</span> Chỗ ở</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div onclick="changeCitySlide(1)" class="citySlide__btn-left"></div>
+                        <div onclick="changeCitySlide(-1)" class="citySlide__btn-right"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -186,17 +290,47 @@
             }
             slide[n].style.display = "block";
             dot[n].className += " active";
+            slideShow = n;
         }
 
-        var n = 0
+        var slideShow = 0
         setInterval(() => {
-            n++
-            if(n > 3) {
-                n = 0
+            slideShow++
+            if(slideShow > 3) {
+                slideShow = 0
             }
-            changeSlide(n);
+            changeSlide(slideShow);
         }, 3000);
         changeSlide();
+
+        var slideCity = 0;
+        function changeCitySlide(n = 0) {
+            slideCity += n;
+            var citySlideTransform = document.getElementById("citySlide__transform");
+            var max = document.getElementsByClassName("citySlide__img").length;
+            
+            if (Math.abs(slideCity) > max - 5) {
+                slideCity -= n;
+            }
+            if (slideCity > 0) {
+                slideCity = 0
+            }
+
+            if (Math.abs(slideCity) == max - 5) { // 5: amount item in row
+                document.getElementsByClassName("citySlide__btn-right")[0].className += " disable";
+            }
+            else {
+                document.getElementsByClassName("citySlide__btn-right")[0].className = "citySlide__btn-right";
+            }
+            if (slideCity == 0) {
+                document.getElementsByClassName("citySlide__btn-left")[0].className += " disable";
+            }
+            else {
+                document.getElementsByClassName("citySlide__btn-left")[0].className += "citySlide__btn-left";
+            }
+
+            citySlideTransform.style.transform = `translateX(${slideCity * 20}%)`;
+        }
     </script>
 </body>
 </html>
