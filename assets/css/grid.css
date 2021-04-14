@@ -5,17 +5,12 @@
 }
 
 .grid.wide {
-    max-width: 1200px;
+    max-width: 1298px;
     margin: 0 auto;
 }
 
 .grid.wide-1520 {
     max-width: 1520px;
-    margin: 0 auto;
-}
-
-.grid.wide-1298 {
-    max-width: 1298px;
     margin: 0 auto;
 }
 
@@ -465,17 +460,17 @@
 }
 
 /* Tablet - PC low resolution */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1024px) {
     /* .wide {
-        width: 644px;
+        width: 800px;
     } */
 }
 
 /* > PC low resolution */
-@media (min-width: 1025px) and (max-width: 1239px) {
-    /* .wide-984 {
+@media (min-width: 1025px) and (max-width: 1350px) {
+    .wide {
         width: 984px;
-    } */
+    }
 
     .wide .row {
         margin-left: -12px;
