@@ -1,5 +1,11 @@
 /* mobile and tablet */
 @media (max-width: 1024px) {
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    
+
     .nav-mobile {
         position: fixed;
         top: 0;
@@ -75,11 +81,23 @@
         font-size: 2.2rem;
         padding: 16px 0;
     }
+
+    .mobile-app__store > div {
+        align-items: unset;
+    }
+
+    .mobile-app__store > div > div {
+        text-align: center;
+    }
+
 }
 
 /* tablet */
 @media (min-width: 740px) and (max-width: 1024px) {
-
+    .grid {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 /* mobile */
@@ -100,10 +118,16 @@
     .grid {
         padding: 0 4px;
     }
+
+    .mobile-app svg {
+        width: unset !important;
+    }
 }
 
 @media (min-width: 1025px) {
     .hide-on-pc {
         display: none;
     }
+
+
 }

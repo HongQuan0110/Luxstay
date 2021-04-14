@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     background-color: var(--theme_palette-white);
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__left {
@@ -363,7 +363,7 @@
     margin-left: 7px;
 }
 
-.active {
+.dot__active {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -451,7 +451,10 @@
     position: relative;
 }
 
-#slide__transform {
+#slide__location,
+#slide__discount,
+#slide__suggest,
+#slide__discover {
     transition: transform linear 0.5s;
 }
 
@@ -687,8 +690,8 @@
     background-image: url('../images/suggest-7.jpg');
 }
 
-.slide__btn-left.top-40,
-.slide__btn-right.top-40 {
+#slide__suggest-btn-left,
+#slide__suggest-btn-right {
     top: 40%;
 }
 
